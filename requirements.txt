@@ -3,7 +3,7 @@ pandas
 matplotlib
 scikit-learn
 seaborn
-libgl1-mesa-glx
+mesa-libGL
 streamlit
 opencv-python
 pillow
