@@ -3,7 +3,7 @@ pandas
 matplotlib
 scikit-learn
 seaborn
-libwxgtk2.8-0 libwxbase2.8-0 wx-common libglu1-mesa libgl1-mesa-glx zlib1g bzip2 gpsd gpsd-clients xcalib libportaudio2 
+libgl1-mesa-glx
 streamlit
 opencv-python
 pillow
