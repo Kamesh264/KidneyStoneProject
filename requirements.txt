@@ -5,6 +5,6 @@ scikit-learn
 seaborn
 matplotlib
 streamlit
-opencv-python
+pip install opencv_python-3.4.1-cp36-cp36m-win_amd64.whls
 pillow
 tensorflow
