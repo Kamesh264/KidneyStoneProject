@@ -10,28 +10,28 @@ Original file is located at
 """
 
 #installing Kaggle
-!pip install -q kaggle
+# !pip install -q kaggle
 
-# uploading the json file
-from google.colab import files
-files.upload()
+# # uploading the json file
+# from google.colab import files
+# files.upload()
 
-#create a kaggle directory
-! mkdir ~/.kaggle
+# #create a kaggle directory
+# ! mkdir ~/.kaggle
 
-#copy the kaggle.json to folder created
-! cp kaggle.json ~/.kaggle
+# #copy the kaggle.json to folder created
+# ! cp kaggle.json ~/.kaggle
 
-#changing permissions
-! chmod 600 ~/.kaggle/kaggle.json
+# #changing permissions
+# ! chmod 600 ~/.kaggle/kaggle.json
 
-!kaggle datasets list
+# !kaggle datasets list
 
-#downloading the dataset
-!kaggle datasets download -d nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
+# #downloading the dataset
+# !kaggle datasets download -d nazmul0087/ct-kidney-dataset-normal-cyst-tumor-and-stone
 
-# extracting the zipfile
-!unzip ct-kidney-dataset-normal-cyst-tumor-and-stone
+# # extracting the zipfile
+# !unzip ct-kidney-dataset-normal-cyst-tumor-and-stone
 
 """# Data Exploration"""
 
@@ -93,7 +93,7 @@ plot_imgs(path_tumor,10)
 
 """# Splitting Data into Training and Testing sets"""
 
-!pip install split-folders
+# !pip install split-folders
 
 import splitfolders
 splitfolders.ratio(
