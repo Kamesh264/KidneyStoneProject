@@ -41,7 +41,7 @@ model = Sequential([
 ])
 
 # Load the trained model
-model = tf.keras.models.load_model('model_dl.h5')
+model.load_weights('model_dl.h5')
 
 # Define the prediction function
 def predict(image):
