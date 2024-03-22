@@ -1,8 +1,44 @@
 import streamlit as st
 import tensorflow as tf
 from PIL import Image
+from keras.models import Sequential
+from keras.layers import Conv2D, Flatten, MaxPooling2D, Dense
 import numpy as np
 import cv2
+
+model = Sequential([
+    Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(200, 200, 1)),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_1'),
+
+    Conv2D(64, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_2'),
+
+    Conv2D(128, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_3'),
+
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_4'),
+
+    Conv2D(512, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_5'),
+
+    Conv2D(256, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_6'),
+
+    Conv2D(128, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_7'),
+    Conv2D(64, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_8'),
+
+    Conv2D(32, (3, 3), padding='same', activation='relu'),
+    MaxPooling2D(pool_size=(2, 2), padding='same', name='maxPool_9'),
+
+    Flatten(),
+
+    Dense(128, activation='relu', name='dense__1'),
+    Dense(64, activation='relu'),
+    Dense(4, activation='softmax')
+])
 
 # Load the trained model
 model = tf.keras.models.load_model('model_dl.h5')
