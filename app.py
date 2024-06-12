@@ -67,6 +67,7 @@ def main():
         # Display the uploaded image
         image = np.array(Image.open(uploaded_file),)
         st.image(image, caption='Uploaded Image', use_column_width=100)
+        st.camera_input(label, key=None, help=None, on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")
 
         # Make prediction
         if st.button('Predict'):

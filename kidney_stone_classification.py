@@ -233,7 +233,7 @@ checkpoint = ModelCheckpoint('model_checkpoint.h5',
 model_fit = model.fit(train_dataset,
                       validation_data=valid_dataset,
                       steps_per_epoch = 3,
-                      epochs = 5,
+                      epochs = 100,
                       callbacks=[checkpoint])
 
 from tensorflow.keras.callbacks import ModelCheckpoint
